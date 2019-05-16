@@ -18,6 +18,11 @@ import { ReviewComponent } from './Assignment/review/review.component';
 import { DirectiveComponent } from './super-html/directive/directive.component';
 import { InbuiltPipesComponent } from './Pipes/inbuilt-pipes/inbuilt-pipes.component';
 import { BadrouteComponent } from './notfound/badroute/badroute.component';
+import { ConsumeparentComponent } from './consume/consumeparent/consumeparent.component';
+import { Consumechild1Component } from './consume/consumechild1/consumechild1.component';
+import { Consumechild2Component } from './consume/consumechild2/consumechild2.component';
+import { KidComponent } from './consume/kid/kid.component';
+import { FormsModule } from "@angular/forms"
 
 
 
@@ -35,12 +40,17 @@ import { BadrouteComponent } from './notfound/badroute/badroute.component';
     DescriptionComponent,
     DirectiveComponent,
     InbuiltPipesComponent,
-    BadrouteComponent
+    BadrouteComponent,
+    ConsumeparentComponent,
+    Consumechild1Component,
+    Consumechild2Component,
+    KidComponent
+    
     
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    AppRoutingModule,FormsModule,
     RouterModule.forRoot([
       // { 
       //   path:'',
@@ -86,8 +96,25 @@ import { BadrouteComponent } from './notfound/badroute/badroute.component';
       }
       ,
       {
+        
         path: 'pipes',
         component:InbuiltPipesComponent
+
+      },
+      {
+        path: 'consume',
+        component:ConsumeparentComponent,
+        children:[
+          {
+            path:'child1',
+            component:Consumechild1Component
+          },
+          {
+            path:'child2',
+            component:Consumechild2Component
+          }
+
+        ]
 
       },
       {

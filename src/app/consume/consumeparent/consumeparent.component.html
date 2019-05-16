@@ -1,0 +1,29 @@
+<p>
+I am Consume parent component! {{name1}}
+</p>
+<br>
+Value of name in parent: {{name1}}
+<br>
+<div class="kid">
+  <app-kid [sendname]="name1" (sendtoparent)="receivednewname($event)"></app-kid>
+
+</div>
+<hr>
+<a routerLink="child1">Child 1</a>&nbsp;
+<a routerLink="child2">Child 2</a>&nbsp;
+<br>
+
+<router-outlet></router-outlet>
+
+<!-- <ol>
+<li>
+  <app-app-child></app-app-child>
+
+</li>
+<li>
+  <app-consumechild2></app-consumechild2>
+
+</li>
+
+
+</ol>  -->
