@@ -22,7 +22,9 @@ import { ConsumeparentComponent } from './consume/consumeparent/consumeparent.co
 import { Consumechild1Component } from './consume/consumechild1/consumechild1.component';
 import { Consumechild2Component } from './consume/consumechild2/consumechild2.component';
 import { KidComponent } from './consume/kid/kid.component';
-import { FormsModule } from "@angular/forms"
+import { FormsModule } from "@angular/forms";
+import { TemplateformComponent } from './forms/templateform/templateform.component';
+import { ReactiveformComponent } from './forms/reactiveform/reactiveform.component'
 
 
 
@@ -44,7 +46,9 @@ import { FormsModule } from "@angular/forms"
     ConsumeparentComponent,
     Consumechild1Component,
     Consumechild2Component,
-    KidComponent
+    KidComponent,
+    TemplateformComponent,
+    ReactiveformComponent
     
     
   ],
@@ -116,6 +120,16 @@ import { FormsModule } from "@angular/forms"
 
         ]
 
+      },
+      {
+        
+        path: 'template',
+        component:TemplateformComponent
+      },
+      {
+        
+        path: 'reactive',
+        component:ReactiveformComponent
       },
       {
         path:'**',
