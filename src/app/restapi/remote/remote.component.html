@@ -1,0 +1,13 @@
+<div>
+ Remote Users:
+</div>
+
+<div>
+<ul>
+  <li *ngFor="let u of users" >  
+  {{u.id}}  {{u.username}} from {{u.address.city}} {{u.address.geo.lat}}
+  </li>
+</ul>
+
+</div>
+

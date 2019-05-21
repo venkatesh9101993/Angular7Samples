@@ -3,6 +3,7 @@ import { NgModule, Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import {HttpClientModule} from '@angular/common/http'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,7 +26,8 @@ import { KidComponent } from './consume/kid/kid.component';
 import { FormsModule } from "@angular/forms";
 import { TemplateformComponent } from './forms/templateform/templateform.component';
 import { ReactiveformComponent } from './forms/reactiveform/reactiveform.component';
-import { AnimationComponent } from './Animate/animation/animation.component'
+import { AnimationComponent } from './Animate/animation/animation.component';
+import { RemoteComponent } from './restapi/remote/remote.component'
 
 
 
@@ -50,13 +52,15 @@ import { AnimationComponent } from './Animate/animation/animation.component'
     KidComponent,
     TemplateformComponent,
     ReactiveformComponent,
-    AnimationComponent
+    AnimationComponent,
+    RemoteComponent
     
     
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,FormsModule,ReactiveFormsModule,BrowserAnimationsModule,
+    AppRoutingModule,FormsModule,ReactiveFormsModule,BrowserAnimationsModule
+    ,HttpClientModule,
     RouterModule.forRoot([
       // { 
       //   path:'',
@@ -99,6 +103,11 @@ import { AnimationComponent } from './Animate/animation/animation.component'
         path: 'review',
         component:ReviewComponent
 
+      }
+      ,
+      {
+        path: 'remote',
+        component:RemoteComponent
       }
       ,
       {
